@@ -1,0 +1,12 @@
+parameters:
+    nfq.weather.class: Nfq\Bundle\WeatherBundle\Service\Weather
+#   default sample data
+    nfq.weather.latitude: 54.696413
+    nfq.weather.longitude: 25.277889
+
+services:
+    nfq.weather:
+        class: %nfq.weather.class%
+#    nfq_weather.example:
+#        class: Nfq\Bundle\WeatherBundle\Example
+        arguments: [%nfq.weather.latitude%, %nfq.weather.longitude%]
