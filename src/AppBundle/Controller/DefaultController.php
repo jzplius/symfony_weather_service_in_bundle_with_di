@@ -10,9 +10,9 @@ use Nfq\Bundle\WeatherBundle;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/weather/{name}", name="homepage")
+     * @Route("/weather", name="homepage")
      */
-    public function indexAction($name)
+    public function indexAction()
     {
         $weather_api = $this->get('nfq.weather');
         $temp = $weather_api->getTemperatureForLocation();
